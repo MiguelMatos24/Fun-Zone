@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
+  color: #ffeabb;
+}
+
+body {
+  overflow: hidden;
+  background: #016bd4;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  text-align: center;
+}
+
+.app .score {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 65px;
+  padding: 20px;
+}
+
+.app .start-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 400px;
+  margin: -175px 0 0 -300px;
+  padding: 25px;
+  background: #47cbff;
+  border-radius: 15px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.app .start-screen h2 {
+  font-size: 50px;
+}
+
+.app .start-screen h3 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.app .start-screen button {
+  border: 3px solid #b400ff;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: 15px;
+  margin-right: 10px;
+}
+
+.app .start-screen button:hover,
+.app .start-screen button.active {
+  background: #b400ff;
+}
+
+.app .start-screen .options {
+  padding-bottom: 15px;
+}
+
+.app .start-screen .options h3 {
+  padding-bottom: 5px;
+}
+
+.app .start-screen .play-btn {
+  margin-top: 10px;
+  font-size: 30px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+}
+
+.app.game-in-progress .score {
+  display: block;
+}
+
+.app.game-in-progress .start-screen {
+  display: none;
+}
+
+.app.game-over canvas {
+  opacity: 0.3;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
