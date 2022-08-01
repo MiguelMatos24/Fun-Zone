@@ -16,13 +16,13 @@ body {
 }
 
 .nav {
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .nav a {
   text-decoration: none;
   color: #00ee98;
-  padding-right: 20px;
+  padding: 0 10px;
   font-size: 25px;
 }
 
@@ -192,7 +192,7 @@ footer span i {
     font-size: 12.5px;
   }
   .container {
-    padding-top: 60px;
+    padding-top: 90px;
     padding-bottom: 60px;
   }
   .container h1 {
@@ -203,13 +203,15 @@ footer span i {
     font-size: 15px;
   }
   .container button {
-    font-size: 10px;
+    font-size: 20px;
     width: 150px;
   }
 
   .container-games h3 {
-    padding-top: 60px;
     font-size: 25px;
+  }
+  .container-games p {
+    font-size: 15px;
   }
   .container-slider {
     overflow-x: hidden;
@@ -221,5 +223,9 @@ footer span i {
   .slides > div {
     width: 100px;
     height: 100px;
+  }
+
+  footer span {
+    font-size: 15px;
   }
 }
