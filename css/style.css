@@ -91,8 +91,7 @@ body {
 }
 .slider {
   width: 500px;
-  text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
   cursor: pointer;
 }
 
@@ -105,8 +104,8 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 .slides::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
 }
 .slides::-webkit-scrollbar-thumb {
   background: #fa0c90;
@@ -121,7 +120,6 @@ body {
   width: 500px;
   height: 500px;
   margin-right: 50px;
-
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.5s;
@@ -129,7 +127,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
 }
 
 img {
@@ -179,13 +176,50 @@ footer {
   margin-top: auto;
 }
 
-.nav span {
+footer span {
   text-align: center;
   font-size: 30px;
   color: #00ee98;
   padding-right: 20px;
 }
 
-.nav span i {
+footer span i {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav a {
+    font-size: 12.5px;
+  }
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .container h1 {
+    font-size: 25px;
+  }
+
+  .container h2 {
+    font-size: 15px;
+  }
+  .container button {
+    font-size: 10px;
+    width: 150px;
+  }
+
+  .container-games h3 {
+    padding-top: 60px;
+    font-size: 25px;
+  }
+  .container-slider {
+    overflow-x: hidden;
+  }
+  .slider {
+    width: 250px;
+    padding-bottom: 60px;
+  }
+  .slides > div {
+    width: 100px;
+    height: 100px;
+  }
 }
